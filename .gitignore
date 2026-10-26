@@ -1,0 +1,51 @@
+# ==============================================================================
+# Git Ignore Configuration for Sahil's Flask Portfolio
+# Excludes local secrets, virtual environments, caches, and local databases.
+# ==============================================================================
+
+# Local configuration, environment variables, and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python byte-code and compiled artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing and coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Local databases and SQLite engine files (contains private contact messages)
+instance/
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# User-uploaded files in instance
+instance/uploads/*
+!instance/uploads/.gitkeep
+
+# IDE, editor, and system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Application log files
+*.log
+scratch/
